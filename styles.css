@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #121619;
+  font-size: 18px;
+}
+
+.home_bg {
+  background-color: black;
+}
+nav {
+  background-color: rgb(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px #cad5ca;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 40px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+nav a:hover {
+  background-color: #cbd3d5;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* home page css starts here*/
+.home_container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(900px, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (width >= 40em) {
+  .home_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 60em) {
+  .home_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.home_container div {
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  padding: 20px;
+}
+.h1button {
+  border-radius: 5px;
+  outline-color: black;
+  background-color: white;
+  height: 30px;
+  width: 120px;
+}
+
+.h1button:hover {
+  background-color: #dee2e3;
+}
+
+#about_us_div {
+  background-image: url(charlesdeluvio-Lks7vei-eAg-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#our_team_div {
+  background-image: url(christin-hume-PNWp1dZ7sO0-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#the_job_div {
+  background-image: url(annie-spratt-QckxruozjRg-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#apply_div {
+  background-image: url(ergonofis-tdnYk4qOGhc-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* about us page css starts here*/
+hr {
+  width: 50%;
+  height: 1px;
+  border-bottom: #cad5ca;
+  margin: 0px;
+  padding: 0px;
+}
+.about_us_container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(900px, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (width >= 40em) {
+  .about_us_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #about_us_text {
+    grid-column: 1/ 2;
+  }
+  #about_us_image {
+    grid-column: 2/ 3;
+  }
+}
+
+@media (width >= 60em) {
+  .about_us_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #about_us_text {
+    grid-column: 1/ 3;
+  }
+  #about_us_image {
+    grid-column: 3/ 5;
+  }
+}
+
+#about_us_text {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.about_us_text2 {
+  text-align: left;
+  justify-content: center;
+  margin: 5px;
+  margin-left: 36px;
+  padding: 10px;
+  max-width: 600px;
+}
+.values {
+  padding: 5px;
+  margin-left: 35px;
+}
+#about_us_image {
+  background-image: url(olena-bohovyk-dIMJWLx1YbE-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+
+/*our team page css sarts here */
+.our_team_container {
+  padding: 10px;
+  display: grid;
+  /* border: 1px solid black; */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (width >= 40em) {
+  .our_team_container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.profiles_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 15px;
+}
+
+#our_team_text {
+  color: white;
+  text-align: canter;
+  padding: 10px;
+}
+.profile_text {
+  color: white;
+  margin: left 15px;
+  text-align: center;
+  padding: 5px;
+}
+.profile_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#profile_1 {
+  background-image: url(profile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+#p1_text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0px;
+}
+#profile_2 {
+  background-image: url(3-profile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+#p2_text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0px;
+}
+#profile_3 {
+  background-image: url(profile_4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+#p3_text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0px;
+}
+#profile_4 {
+  background-image: url(2-profile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+#p4_text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0px;
+}
+/* start of job spec page css*/
+.the_job_container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  justify-content: center;
+}
+.the_job_div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#the_job_text {
+  padding: 25px;
+  margin-right: 5px;
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+  align-items: end;
+  align-content: center;
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 20;
+}
+#the_job_text ul {
+  margin-left: 25px;
+}
+#job_points_2 {
+  padding: 5px;
+}
+#bold_text {
+  font-weight: bold;
+}
+#the_job-image {
+  background-image: url(priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: end;
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 22;
+}
+
+/* applicaation form css starts here*/
+.application_container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  border-radius: 15px;
+  background-color: rgb(220, 230, 220, 0.5);
+  backdrop-filter: blur(10px);
+  max-width: 900px;
+  padding: 4px;
+}
+.form h1 {
+  color: white;
+  text-align: center;
+  margin: 25px;
+}
+.details_section {
+  justify-content: center;
+  align-items: center;
+}
+.form_img {
+  float: right;
+  background-image: url(jake-leonard-jMcDAt6rUQY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.details_input {
+  border-color: rgb(0, 0, 0);
+  font: left;
+}
+
+.form-control {
+  width: 50%;
+  padding: 15px;
+  margin: 10px;
+  margin-right: 25px;
+  outline: none;
+}
+textarea.form-control {
+  height: 150px;
+  resize: vertical;
+}
+.submit_button {
+  text-decoration: none;
+  color: black;
+  background-color: #cad5ca;
+  padding: 4px;
+  margin: 5px;
+  margin-left: 15px;
+  display: block;
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+}
+.submit_button:hover {
+  background-color: #cbd3d5;
+  transition: 0.5s;
+}
+/*lnks page start here*/
+.links_container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  justify-content: center;
+}
+.links_div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#links_image {
+  background-image: url(blake-connally-B3l0g6HLxr8-unsplash.jpg);
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: end;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 20;
+}
+#links_text {
+  padding: 25px;
+  margin-right: 5px;
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+  align-items: end;
+  align-content: center;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 22;
+}
+.links_div ol {
+  padding: 10px;
+}
+.links_div a {
+  text-decoration: none;
+  color: #cad5ca;
+  padding: 5px;
+}
